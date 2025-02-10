@@ -12,6 +12,10 @@ class NerService:
             {
                 "text": sentence['text'],
                 "imagesUrl": sentence['imagesUrl'],
+                "rootPath": sentence['rootPath'],
+                "audioPath": sentence['audioPath'],
+                "videoPath": sentence['videoPath'],
+                "imagesPath": sentence['imagesPath'],
                 "keyWords": [a.text for a in self.nlp(sentence['text']).ents]}
             for sentence in sentencelist
         ]
